@@ -1,4 +1,6 @@
-# Hoodie Dockerfile
+# Hoodie Dockerfile for Raspberry Pi
+
+** WIP, currently not working, i'm on it **
 
 **Warning: not recommended for production use**
 
