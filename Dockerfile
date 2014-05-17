@@ -1,4 +1,4 @@
-FROM ubuntu:trusty
+FROM resin/rpi-raspbian
 
 # install couchdb and curl
 RUN apt-get -y update
@@ -6,7 +6,7 @@ RUN apt-get -y -q install couchdb curl git
 RUN apt-get -y -q clean
 
 # install nodejs
-RUN curl -o ~/node.tar.gz http://nodejs.org/dist/v0.10.28/node-v0.10.28-linux-x64.tar.gz
+RUN curl -o ~/node.tar.gz http://nodejs.org/dist/v0.10.28/node-v0.10.28-linux-arm-pi.tar.gz
 RUN cd /usr/local && tar --strip-components 1 -xzf ~/node.tar.gz
 RUN rm ~/node.tar.gz
 
