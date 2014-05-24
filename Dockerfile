@@ -2,7 +2,7 @@ FROM resin/rpi-raspbian
 
 # install couchdb and curl
 RUN apt-get -y update
-RUN apt-get -y -q install couchdb curl git
+RUN apt-get -y -q install couchdb curl git sudo
 RUN apt-get -y -q clean
 
 # install nodejs
