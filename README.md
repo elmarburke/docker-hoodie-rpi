@@ -1,7 +1,5 @@
 # Hoodie Dockerfile for Raspberry Pi
 
-** WIP, currently not working, i'm on it **
-
 **Warning: not recommended for production use**
 
 This docker file bundles together Node.js, CouchDB and Hoodie to make it
@@ -16,7 +14,7 @@ Install docker from [docker.io](http://docker.io), then:
 
 ```
 cd docker-hoodie
-docker build -t hoodiehq/hoodie .
+docker build -t elmarburke/rpi-hoodie .
 ```
 
 Then, create a data directory to store your couchdb data etc.
@@ -30,7 +28,7 @@ chmod 777 ./data
 
 ```
 docker run -p 6001:6001 -p 6002:6002 \
-    -v `pwd`/data:/home/hoodie/project/data hoodiehq/hoodie
+    -v `pwd`/data:/home/hoodie/project/data elmarburke/rpi-hoodie
 ```
 
 You may want to replace `pwd` with the full path to the data directory you
